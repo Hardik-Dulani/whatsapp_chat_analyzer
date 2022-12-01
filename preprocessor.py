@@ -12,7 +12,7 @@ def preprocess(data):
         else:
             dates[i] = dates[i][:12] + '0' + dates[i][12:]
     df = pd.DataFrame({'user_message': messages, 'date': dates})
-    df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y, %I:%M %p - ')
+    df['date'] = pd.to_datetime(df['date'], format='%d/%m/%y, %I:%M %p - ')
     users = []
     messages = []
     for message in df['user_message']:

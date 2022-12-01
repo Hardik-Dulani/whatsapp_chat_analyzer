@@ -90,7 +90,7 @@ if uploaded_file is not None:
             with colB:
                 fig, ax = plt.subplots()
                 ax.pie(new_df['percent'], labels=new_df.index)
-
+                st.dataframe(new_df)
                 st.pyplot(fig)
         st.title('Most used words')
         new_df2 = helper.most_words(selected_user, df)
